@@ -1,0 +1,48 @@
+### Get Offers
+GET http://localhost:4004/promotion/OffersAndSchemes
+
+### Get Offers
+GET http://localhost:4004/promotion/OffersAndSchemes(f2b029cf-a1e8-499b-ae87-bf553b782182)
+customheader:abcd
+
+### Add Offers
+POST http://localhost:4004/promotion/OffersAndSchemes HTTP/1.1
+Content-Type: application/json
+
+{
+  "typeofofferandscheme": "ProductInformation",
+  "offersschemedescription": "Get 10% off on your first order",
+  "subject": "Welcome Offer",
+  "notification": {
+    "email": "example4@example.com"
+  }
+ 
+}
+
+
+### Get Offers
+GET http://localhost:4004/promotion/OffersAndSchemes?expand=testmany
+
+### Get Offers
+GET http://localhost:4004/promotion/OffersAndSchemes?expand=notification
+
+### Add TestManies
+POST http://localhost:4004/promotion/TestManies HTTP/1.1
+Content-Type: application/json
+
+[
+  {
+      "somefield": "Test object 1",
+      "offer": { "ID" : "e4926f51-57ae-4b32-86d5-4a5e5a8c71e9"}
+  },
+  {
+      "somefield": "Test object 2",
+      "offer": { "ID" : "e4926f51-57ae-4b32-86d5-4a5e5a8c71e9"}
+  }
+
+
+]
+
+
+
+
