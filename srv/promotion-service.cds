@@ -9,6 +9,7 @@ service PromotionService {
    entity BroadcastOffersAndSchemes                     as projection on customer.BroadcastOffersAndSchemes;
    entity NotificationsMedia                            as projection on customer.NotificationsMedia;
    function getDate() returns Date;
+   function getPrice() returns Boolean;
 
 
 }
